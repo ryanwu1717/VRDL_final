@@ -33,7 +33,8 @@ def run_model(net, optimizer, train_loader, Epoch, Loss_fuc):
             count += len(x)
             _, pred_label = torch.max(output, 1)
             accuracy += (pred_label == y).sum().item()
-            loss = Loss_fuc(output, y)
+            # print(type(output),type(y))
+            loss = Loss_fuc(output, y.long())
             totalLoss += loss.item()*len(y)
 
             optimizer.zero_grad()
