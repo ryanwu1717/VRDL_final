@@ -61,7 +61,7 @@ class Loader(data.Dataset):
         classes = ["LAG", "DOL", "OTHER", "BET", "ALB", "NoF", "YFT", "SHARK"]
         path = os.path.join(self.root,classes[int(label)],  str(
             self.img_name[index]).zfill(4))
-        print(path)
+        # print(path)
         img = Image.open(path).convert('RGB')
         if self.mode == 'test':
             img = self.transform_0(img)

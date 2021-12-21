@@ -24,7 +24,7 @@ def run_model(net, optimizer, train_loader, Epoch, Loss_fuc):
         totalLoss = 0
         for x, y in train_loader:
             x = x.float()
-            print(x,y)
+            # print(x,y)
             if use_cuda:
                 y = np.array(y, int) 
                 y = torch.Tensor(y) 
