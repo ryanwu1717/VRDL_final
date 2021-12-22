@@ -1,4 +1,4 @@
-classes = 8
+classes = 1
 train = data/train.txt
 vaild = data/train.txt
 names = data/fish.names
