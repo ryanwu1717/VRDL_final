@@ -20,7 +20,7 @@ for tmpfile in filenames:
 
         for tmpanno in tmpval['annotations']:
             # annotations
-            label_idx = int(classes.index(tmpanno["class"]))
+            label_idx = int(classes.index(tmpanno["class"]))+1
             x_center = (tmpanno['x'] + tmpanno['width']/2)/image_size[2]
             y_center = (tmpanno['y'] + tmpanno['height']/2)/image_size[1]
             width = tmpanno['width']/image_size[2]
